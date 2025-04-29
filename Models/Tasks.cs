@@ -8,7 +8,7 @@ namespace EasyToDoWeb.Models
         [Key]
         public int taskID { get; set; }
         //---------------------------------------------------------------------------------------
-        [StringLength(20, MinimumLength = 5, ErrorMessage = "O tamano minímo é de 5 caracteres")]
+        [StringLength(50, MinimumLength = 5, ErrorMessage = "O tamano minímo é de 5 caracteres")]
         [Required(ErrorMessage = "O campo é obrigatório!")]
         [Display(Name = "Nome da Tarefa")]
         public string Name { get; set; }

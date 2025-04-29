@@ -170,3 +170,4 @@ C:\Users\Bruno Rodrigues\source\repos\EasyToDoWeb\obj\Debug\net8.0\refint\EasyTo
 C:\Users\Bruno Rodrigues\source\repos\EasyToDoWeb\obj\Debug\net8.0\EasyToDoWeb.pdb
 C:\Users\Bruno Rodrigues\source\repos\EasyToDoWeb\obj\Debug\net8.0\EasyToDoWeb.genruntimeconfig.cache
 C:\Users\Bruno Rodrigues\source\repos\EasyToDoWeb\obj\Debug\net8.0\ref\EasyToDoWeb.dll
+C:\Users\Bruno Rodrigues\source\repos\EasyToDoWeb\obj\Debug\net8.0\EasyToDoWeb.sourcelink.json

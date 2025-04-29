@@ -1,32 +1,44 @@
-using System.Diagnostics;
+using EasyToDoWeb.Repositories;
+using EasyToDoWeb.Repositories.Interfaces;
 using EasyToDoWeb.Models;
+using EasyToDoWeb.ViewModel;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EasyToDoWeb.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ITarefasRepository _tarefasRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ITarefasRepository tarefasRepository) //DI do meu repo
         {
-            _logger = logger;
+            _tarefasRepository = tarefasRepository;
         }
 
         public IActionResult Index()
         {
-            return View();
-        }
+            var TarefaViewModel = _tarefasRepository.Tarefas.Select(t => new TarefaViewModel
+            {
+                Name = t.Name,
+                Situacao = t.Situacao,
+                Prioridade = t.Prioridade,
+                CategoriaID = t.CategoriaID,
+                CategoriaNome = t.Categoria != null ? t.Categoria.NomeCategoria : "Sem Categoria", 
+                Detail = t.DescricaoDetalhada,
+                DataPrevista = t.DataPrevista.ToString("dd/MM/yyyy"),
+            }).ToList();
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+            Console.WriteLine($"Número de tarefas encontradas: {TarefaViewModel.Count}");
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (!TarefaViewModel.Any())
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("O repository de tarefas retornou nulo");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+
+            return View(TarefaViewModel);
         }
     }
 }

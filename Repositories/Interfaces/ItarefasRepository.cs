@@ -1,11 +1,12 @@
-﻿using EasyToDoWeb.Models;
+﻿using System.Linq;
+using EasyToDoWeb.Models;
 namespace EasyToDoWeb.Repositories.Interfaces
 {
-    public interface ItarefasRepository
+    public interface ITarefasRepository
     {
-        List<Tasks> TodasTarefas();
+        IEnumerable<Tasks> Tarefas { get; }
         Tasks BuscarId(int id);
-        void BuscarName(string name);
+        IEnumerable<Tasks> BuscarName(string name);
         void Adicionar(Tasks Tarefa);
         void Editar(Tasks Tarefa);
         void Delete(int id);

@@ -5,6 +5,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\viewmodel\\tarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:viewmodel\\tarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\repositories\\tarefasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:repositories\\tarefasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\repositories\\interfaces\\itarefasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:repositories\\interfaces\\itarefasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,9 +44,74 @@
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T00:37:12.575Z",
+              "WhenOpened": "2025-04-29T03:00:41.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Models\\Categoria.cs",
+              "RelativeDocumentMoniker": "Models\\Categoria.cs",
+              "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Models\\Categoria.cs",
+              "RelativeToolTip": "Models\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T02:06:04.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-29T02:02:16.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TarefaViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\ViewModel\\TarefaViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\TarefaViewModel.cs",
+              "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\ViewModel\\TarefaViewModel.cs",
+              "RelativeToolTip": "ViewModel\\TarefaViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T01:42:02.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TarefasRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Repositories\\TarefasRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\TarefasRepository.cs",
+              "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Repositories\\TarefasRepository.cs",
+              "RelativeToolTip": "Repositories\\TarefasRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T23:02:29.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ITarefasRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Repositories\\Interfaces\\ITarefasRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\ITarefasRepository.cs",
+              "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Repositories\\Interfaces\\ITarefasRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\ITarefasRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T02:27:15.068Z",
               "EditorCaption": ""
             }
           ]
