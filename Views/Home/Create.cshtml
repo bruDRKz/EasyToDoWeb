@@ -1,0 +1,54 @@
+﻿@model EasyToDoWeb.ViewModel.TarefaViewModel
+
+@{
+    ViewData["Title"] = "Nova Tarefa";
+}
+
+<h2 class="mb-4">Criar Nova Tarefa</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Detail" class="form-label"></label>
+        <textarea asp-for="Detail" class="form-control" rows="4"></textarea>
+        <span asp-validation-for="Detail" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Prioridade" class="form-label"></label>
+        <input asp-for="Prioridade" type="number" class="form-control" />
+        <span asp-validation-for="Prioridade" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DataPrevista" class="form-label"></label>
+        <input asp-for="DataPrevista" type="date" class="form-control" />
+        <span asp-validation-for="DataPrevista" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Situacao" class="form-label"></label>
+        <input asp-for="Situacao" class="form-control" />
+        <span asp-validation-for="Situacao" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="CategoriaID" class="form-label"></label>
+        <input asp-for="CategoriaID" class="form-control" />
+        <span asp-validation-for="CategoriaID" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary ms-2">Cancelar</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

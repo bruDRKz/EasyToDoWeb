@@ -9,8 +9,7 @@ namespace EasyToDoWeb.ViewModel
         public string DataPrevista { get; set; }
         public string Detail { get; set; }
         public int Prioridade { get; set; }
-        public int CategoriaID { get; set; }
-        public string CategoriaNome { get; set; }  
+        public int CategoriaID { get; set; } 
     }
 
 }

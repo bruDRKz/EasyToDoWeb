@@ -20,11 +20,11 @@ namespace EasyToDoWeb.Controllers
         {
             var TarefaViewModel = _tarefasRepository.Tarefas.Select(t => new TarefaViewModel
             {
+                Id = t.taskID,
                 Name = t.Name,
                 Situacao = t.Situacao,
                 Prioridade = t.Prioridade,
                 CategoriaID = t.CategoriaID,
-                CategoriaNome = t.Categoria != null ? t.Categoria.NomeCategoria : "Sem Categoria", 
                 Detail = t.DescricaoDetalhada,
                 DataPrevista = t.DataPrevista.ToString("dd/MM/yyyy"),
             }).ToList();
@@ -40,5 +40,76 @@ namespace EasyToDoWeb.Controllers
 
             return View(TarefaViewModel);
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(TarefaViewModel tarefaViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var tarefa = new Tasks
+                {
+                    Name = tarefaViewModel.Name,
+                    DescricaoDetalhada = tarefaViewModel.Detail,
+                    Prioridade = tarefaViewModel.Prioridade,
+                    CategoriaID = tarefaViewModel.CategoriaID,
+                    Situacao = "Pendente",
+                    DataPrevista = DateTime.Parse(tarefaViewModel.DataPrevista),
+                    DataInclusao = DateTime.Now
+                };
+
+                _tarefasRepository.Adicionar(tarefa);
+                return RedirectToAction("Index");
+            }
+            foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+            {
+                Console.WriteLine(error.ErrorMessage);
+            }
+            return View(tarefaViewModel);
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id) 
+        {
+            var tarefa = _tarefasRepository.Tarefas.FirstOrDefault(x => x.taskID == id);
+
+            if (tarefa == null)
+            {
+                return NotFound();
+            }
+
+
+            var tarefaViewModel = new TarefaViewModel
+            {
+                Id = tarefa.taskID,
+                Name = tarefa.Name,
+                Detail = tarefa.DescricaoDetalhada,
+                Prioridade = tarefa.Prioridade,
+                DataPrevista = tarefa.DataPrevista.ToString("yyyy-MM-dd"),
+                Situacao = tarefa.Situacao,
+                CategoriaID = tarefa.CategoriaID
+            };
+
+            return View("Delete", tarefaViewModel);
+            
+                
+        }
+        [HttpPost]
+        public IActionResult Delete(TarefaViewModel tarefa)
+        {
+            if (tarefa == null)
+            {
+                return NotFound();
+            }
+
+            _tarefasRepository.Delete(tarefa.Id);
+            return RedirectToAction("Index");
+        }
+        
     }
 }

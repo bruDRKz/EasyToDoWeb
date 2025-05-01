@@ -1,0 +1,56 @@
+﻿@model EasyToDoWeb.ViewModel.TarefaViewModel
+
+@{
+    ViewData["Title"] = "Deletando uma tarefa";
+}
+
+<h2 class="mb-4">Deseja realmente apagar esta tarefa?</h2>
+
+<form method="post" asp-controller="Home" asp-action="Delete">
+
+    <input type="hidden" asp-for = "Id" />
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" readonly class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Detail" class="form-label"></label>
+        <textarea asp-for="Detail" readonly class="form-control" rows="4"></textarea>
+        <span asp-validation-for="Detail" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Prioridade" class="form-label"></label>
+        <input asp-for="Prioridade" type="number" readonly class="form-control" />
+        <span asp-validation-for="Prioridade" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DataPrevista" class="form-label"></label>
+        <input asp-for="DataPrevista" type="date" readonly class="form-control" />
+        <span asp-validation-for="DataPrevista" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Situacao" class="form-label"></label>
+        <input asp-for="Situacao" readonly class="form-control" />
+        <span asp-validation-for="Situacao" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="CategoriaID" class="form-label"></label>
+        <input asp-for="CategoriaID" readonly class="form-control" />
+        <span asp-validation-for="CategoriaID" readonly class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-danger">Deletar</button>
+    <a asp-action="Index" readonly class="btn btn-secondary ms-2">Cancelar</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -20,6 +20,7 @@ namespace EasyToDoWeb.Repositories
         {
             _context.Tarefas.Add(Tarefa);
             _context.SaveChanges();
+            Console.WriteLine($"Tarefa {Tarefa.Name} foi salva com sucesso!");
         }
 
         public Tasks BuscarId(int id) => _context.Tarefas.FirstOrDefault(t => t.taskID == id);
