@@ -5,7 +5,7 @@ namespace EasyToDoWeb.ViewModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Situacao { get; set; }
+        public string? Situacao { get; set; }
         public string DataPrevista { get; set; }
         public string Detail { get; set; }
         public int Prioridade { get; set; }

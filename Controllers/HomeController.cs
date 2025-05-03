@@ -110,6 +110,59 @@ namespace EasyToDoWeb.Controllers
             _tarefasRepository.Delete(tarefa.Id);
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var tarefa = _tarefasRepository.Tarefas.FirstOrDefault(x => x.taskID == id);
+
+            if (tarefa == null)
+            {
+                return NotFound();
+            }
+
+
+            var tarefaViewModel = new TarefaViewModel
+            {
+                Id = tarefa.taskID,
+                Name = tarefa.Name,
+                Detail = tarefa.DescricaoDetalhada,
+                Prioridade = tarefa.Prioridade,
+                DataPrevista = tarefa.DataPrevista.ToString("yyyy-MM-dd"),
+                Situacao = tarefa.Situacao,
+                CategoriaID = tarefa.CategoriaID
+            };
+
+            return View("Edit", tarefaViewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(TarefaViewModel tarefaViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var tarefa = new Tasks
+                {
+                    taskID = tarefaViewModel.Id,
+                    Name = tarefaViewModel.Name,
+                    DescricaoDetalhada = tarefaViewModel.Detail,
+                    Prioridade = tarefaViewModel.Prioridade,
+                    CategoriaID = tarefaViewModel.CategoriaID,
+                    Situacao = tarefaViewModel.Situacao,
+                    DataPrevista = DateTime.Parse(tarefaViewModel.DataPrevista),
+                };
+
+                _tarefasRepository.Edit(tarefa);
+                return RedirectToAction("Index");
+            }
+
+            foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+            {
+                Console.WriteLine(error.ErrorMessage);
+            }
+            
+            return View(tarefaViewModel);
+        }
         
     }
 }

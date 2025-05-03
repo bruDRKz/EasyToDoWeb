@@ -8,7 +8,7 @@ namespace EasyToDoWeb.Repositories.Interfaces
         Tasks BuscarId(int id);
         IEnumerable<Tasks> BuscarName(string name);
         void Adicionar(Tasks Tarefa);
-        void Editar(Tasks Tarefa);
+        void Edit(Tasks Tarefa);
         void Delete(int id);
     }
 }

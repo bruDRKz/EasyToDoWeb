@@ -1,12 +1,12 @@
 ﻿@model EasyToDoWeb.ViewModel.TarefaViewModel
 
 @{
-    ViewData["Title"] = "Nova Tarefa";
+    ViewData["Title"] = "Editando uma tarefa";
 }
 
-<h2 class="mb-4">Criar Nova Tarefa</h2>
+<h2 class="mb-4">Editando uma Tarefa</h2>
 
-<form asp-action="Create" method="post">
+<form asp-action="Edit" method="post">
     <div class="mb-3">
         <label asp-for="Name" class="form-label"></label>
         <input asp-for="Name" class="form-control" />
@@ -33,8 +33,13 @@
 
     <div class="mb-3">
         <label asp-for="Situacao" class="form-label"></label>
-        <input asp-for="Situacao" readonly class="form-control" placeholder="Pendente"/>
+        <select asp-for="Situacao" class="form-control">
+            <option value="Pendente">Pendente</option>
+            <option value="Concluída">Concluída</option>
+        </select>
+        <span asp-validation-for="Situacao" class="text-danger"></span>
     </div>
+
 
     <div class="mb-3">
         <label asp-for="CategoriaID" class="form-label"></label>

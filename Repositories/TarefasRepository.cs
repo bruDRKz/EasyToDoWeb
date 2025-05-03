@@ -40,10 +40,12 @@ namespace EasyToDoWeb.Repositories
             }
         }
 
-        public void Editar(Tasks Tarefa)
+        public void Edit(Tasks Tarefa)
         {
             _context.Tarefas.Update(Tarefa);
             _context.SaveChanges();
+            Console.WriteLine("Passou aqui");
+            Console.WriteLine($"Tarefa {Tarefa.Name} foi alterada com sucesso!");
         }
     }
 }
