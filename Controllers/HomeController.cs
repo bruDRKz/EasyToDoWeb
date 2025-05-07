@@ -27,6 +27,8 @@ namespace EasyToDoWeb.Controllers
                 CategoriaID = t.CategoriaID,
                 Detail = t.DescricaoDetalhada,
                 DataPrevista = t.DataPrevista.ToString("dd/MM/yyyy"),
+                NomeCategoria = t.Categoria.NomeCategoria,
+                CorCategoria = t.Categoria.Cor,
             }).ToList();
 
             Console.WriteLine($"Número de tarefas encontradas: {TarefaViewModel.Count}");
@@ -38,7 +40,11 @@ namespace EasyToDoWeb.Controllers
                 Console.ForegroundColor = ConsoleColor.White;
             }
 
-            return View(TarefaViewModel);
+            //Agrupo elas por categoria para trazer a exibição em blocos de cards
+            var tarefasGroup = TarefaViewModel 
+                .GroupBy(t => t.NomeCategoria)
+                .ToDictionary(g => g.Key, g => g.ToList());
+            return View(tarefasGroup);
         }
 
         [HttpGet]
@@ -68,7 +74,9 @@ namespace EasyToDoWeb.Controllers
             }
             foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(error.ErrorMessage);
+                Console.ForegroundColor = ConsoleColor.White;
             }
             return View(tarefaViewModel);
         }
@@ -158,7 +166,9 @@ namespace EasyToDoWeb.Controllers
 
             foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(error.ErrorMessage);
+                Console.ForegroundColor = ConsoleColor.White;
             }
             
             return View(tarefaViewModel);

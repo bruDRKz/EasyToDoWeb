@@ -14,13 +14,16 @@ namespace EasyToDoWeb.Repositories
             _context = context;
         }
 
-        public IEnumerable<Tasks> Tarefas => _context.Tarefas.ToList();
+        public IEnumerable<Tasks> Tarefas => _context.Tarefas.Include(t => t.Categoria).ToList();
 
         public void Adicionar(Tasks Tarefa)
         {
             _context.Tarefas.Add(Tarefa);
             _context.SaveChanges();
-            Console.WriteLine($"Tarefa {Tarefa.Name} foi salva com sucesso!");
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine($"Tarefa >>> {Tarefa.Name} <<< foi salva com sucesso!");
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         public Tasks BuscarId(int id) => _context.Tarefas.FirstOrDefault(t => t.taskID == id);
@@ -44,8 +47,10 @@ namespace EasyToDoWeb.Repositories
         {
             _context.Tarefas.Update(Tarefa);
             _context.SaveChanges();
-            Console.WriteLine("Passou aqui");
-            Console.WriteLine($"Tarefa {Tarefa.Name} foi alterada com sucesso!");
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine($"Tarefa >>>> {Tarefa.Name} <<<< foi alterada com sucesso!");
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }
