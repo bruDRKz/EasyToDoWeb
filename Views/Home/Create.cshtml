@@ -1,4 +1,4 @@
-﻿@model EasyToDoWeb.ViewModel.TarefaViewModel
+﻿@model EasyToDoWeb.ViewModel.TarefaViewModel //Usar a mesma logica do model da Index, para trazer tanto o nome da categoria quanto seu ID, isso ja resolve o problema da exibição
 
 @{
     ViewData["Title"] = "Nova Tarefa";
@@ -37,10 +37,17 @@
     </div>
 
     <div class="mb-3">
-        <label asp-for="CategoriaID" class="form-label"></label>
-        <input asp-for="CategoriaID" class="form-control" />
-        <span asp-validation-for="CategoriaID" class="text-danger"></span>
+        <label asp-for="NomeCategoria" class="form-label"></label>
+        <select asp-for="CategoriaID" class="form-select">
+            <option value="">Selecione uma categoria</option>
+            @foreach (var categoria in Model.Categorias)
+            {
+                <option value="@categoria.Value">@categoria.Text</option>
+            }
+        </select>
     </div>
+   
+
 
     <button type="submit" class="btn btn-success">Salvar</button>
     <a asp-action="Index" class="btn btn-secondary ms-2">Cancelar</a>

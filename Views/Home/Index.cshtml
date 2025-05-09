@@ -4,95 +4,109 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-    
-    .card-text {
-        white-space: normal !important;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
 
-    .kanban-board {
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 1rem;
-    }
+	.card-text {
+		white-space: normal !important;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+	}
 
-    .kanban-column {
-        display: inline-block;
-        vertical-align: top;
-        width: 300px;
-        margin-right: 1rem;
-    }
+	.kanban-board {
+		display: flex;
+		/* padding-bottom: 1rem */
+		margin-bottom: auto;
+		gap: 1rem;
+		height: 62vh;
+	}
 
-        .kanban-column h4 {
-            text-align: center;
-            background-color: #f8f9fa;
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-        }
+	.kanban-column {
+		flex: 0 0 300px;
+	}
 
-    .kanban-card {
-        margin-bottom: 1rem;
-    }
 
-    .card-scroll-wrapper {
-        min-height: 85vh;
-    }
+		.kanban-column h4 {
+			text-align: center;
+			background-color: #f8f9fa;
+			padding: 0.5rem;
+			border-radius: 0.5rem;
+		}
+
+	.kanban-card {
+		margin-bottom: 1rem;
+	}
+
+	.card-scroll-wrapper {
+		max-height: 62vh;
+		overflow-y: auto;
+		overflow-x: auto;
+		padding-right: 8px; 
+
+		scrollbar-width: none; 
+		-ms-overflow-style: none; 
+	}
+
+		.card-scroll-wrapper::-webkit-scrollbar {
+			width: 0px;
+			height: 0px;
+			background: transparent; /* Chrome, Safari e Edge modernos */
+		}
+
+	
 </style>
 
-<div class="container py-4">
-    <h2 class="mb-3">Tarefas por Categoria</h2>
-    <a href="/Home/Create" class="btn btn-success mb-3">+ Nova Tarefa</a>
+<div class="container-fluid py-4">
+	<h2 class="mb-3">Tarefas por Categoria</h2>
+	<a href="/Home/Create" class="btn btn-success mb-3">+ Nova Tarefa</a>
 
-    <div class="kanban-board">
-        @foreach (var grupo in Model)
-        {
-            var nomeCategoria = grupo.Key;
-            var tarefas = grupo.Value;
+	<div class="kanban-board">
+		@foreach (var grupo in Model)
+		{
+			var nomeCategoria = grupo.Key;
+			var tarefas = grupo.Value;
 
-            var corCategoria = tarefas.FirstOrDefault()?.CorCategoria?.ToLower() ?? "gray";
-            var coresSuaves = new Dictionary<string, string>
-                {
-                    ["red"] = "rgba(220, 53, 69, 0.1)",
-                    ["blue"] = "rgba(13, 110, 253, 0.1)",
-                    ["green"] = "rgba(25, 135, 84, 0.1)",
-                    ["orange"] = "rgba(255, 165, 0, 0.2)",
-                    ["purple"] = "rgba(128, 0, 128, 0.2)",
-                    ["gray"] = "rgba(108, 117, 125, 0.1)"
-                };
+			var corCategoria = tarefas.FirstOrDefault()?.CorCategoria?.ToLower() ?? "gray";
+			var coresSuaves = new Dictionary<string, string>
+				{
+					["red"] = "rgba(220, 53, 69, 0.1)",
+					["blue"] = "rgba(13, 110, 253, 0.1)",
+					["green"] = "rgba(25, 135, 84, 0.1)",
+					["orange"] = "rgba(255, 165, 0, 0.2)",
+					["purple"] = "rgba(128, 0, 128, 0.2)",
+					["gray"] = "rgba(108, 117, 125, 0.1)"
+				};
 
-            var bgCor = coresSuaves.ContainsKey(corCategoria) ? coresSuaves[corCategoria] : coresSuaves["gray"];
+			var bgCor = coresSuaves.ContainsKey(corCategoria) ? coresSuaves[corCategoria] : coresSuaves["gray"];
 
-            <div class="kanban-column">
-                <h4 class="text-dark">@nomeCategoria</h4>
-                <div class="card-scroll-wrapper">
-                    @foreach (var tarefa in tarefas)
-                    {
-                        <div class="card shadow-sm border-2 rounded-2 border-light kanban-card text-light" style="background-color: @bgCor;">
-                            <div class="card-body">
-                                <h5 class="card-title">@tarefa.Name</h5>
-                                <span class="badge @(tarefa.Prioridade == 0 ? "bg-danger":
+			<div class="kanban-column">
+				<h4 class="text-dark">@nomeCategoria</h4>
+				<div class="card-scroll-wrapper">
+					@foreach (var tarefa in tarefas)
+					{
+						<div class="card shadow-sm border-2 rounded-2 border-light kanban-card text-light" style="background-color: @bgCor;">
+							<div class="card-body">
+								<h5 class="card-title">@tarefa.Name</h5>
+								<span class="badge @(tarefa.Prioridade == 0 ? "bg-danger":
                                                      tarefa.Prioridade == 1 ? "bg-warning":
                                                      tarefa.Prioridade == 2 ? "bg-primary":
                                                                               "bg-success")">
-                                    Prioridade: @tarefa.Prioridade
-                                </span>
-                                <p class="card-text mt-2">@tarefa.Detail</p>
-                            </div>
-                            <div class="card-footer bg-transparent border-top-0">
-                                <small class=" text-light">Data Prevista: @tarefa.DataPrevista</small><br />
-                                <span class="badge @(tarefa.Situacao == "Pendente" ? "bg-warning" : "bg-success")">
-                                    @tarefa.Situacao
-                                </span>
-                            </div>
-                            <div class="accordion-button w-100">
-                                <a asp-controller="Home" asp-action="Edit" asp-route-id="@tarefa.Id" class="btn btn-sm btn-primary m-1 w-45">Editar</a>
-                                <a asp-controller="Home" asp-action="Delete" asp-route-id="@tarefa.Id" class="btn btn-sm btn-danger m-1 w-45">Apagar</a>
-                            </div>
-                        </div>
-                    }
-                </div>
-            </div>
-        }
-    </div>
+									Prioridade: @tarefa.Prioridade
+								</span>
+								<p class="card-text mt-2">@tarefa.Detail</p>
+							</div>
+							<div class="card-footer bg-transparent border-top-0">
+								<small class=" text-light">Data Prevista: @tarefa.DataPrevista</small><br />
+								<span class="badge @(tarefa.Situacao == "Pendente" ? "bg-warning" : "bg-success")">
+									@tarefa.Situacao
+								</span>
+							</div>
+							<div class="accordion-button w-100">
+								<a asp-controller="Home" asp-action="Edit" asp-route-id="@tarefa.Id" class="btn btn-sm btn-primary m-1 w-45">Editar</a>
+								<a asp-controller="Home" asp-action="Delete" asp-route-id="@tarefa.Id" class="btn btn-sm btn-danger m-1 w-45">Apagar</a>
+							</div>
+						</div>
+					}
+				</div>
+			</div>
+		}
+	</div>
 </div>

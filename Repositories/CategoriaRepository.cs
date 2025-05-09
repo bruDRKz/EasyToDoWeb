@@ -33,7 +33,7 @@ namespace EasyToDoWeb.Repositories
             }
         }
 
-        public IEnumerable<Categoria> GetAll => _context.Categoria.ToList();
+        public IEnumerable<Categoria> GetAll() => _context.Categoria.ToList();
 
         public Categoria GetById(int id) => _context.Categoria.FirstOrDefault(c => c.CategoriaID == id);
 
@@ -46,5 +46,6 @@ namespace EasyToDoWeb.Repositories
             Console.WriteLine($"Categoria >>>> {categoria.NomeCategoria} <<<< foi alterada com sucesso!");
             Console.ForegroundColor = ConsoleColor.White;
         }
+
     }
 }

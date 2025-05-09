@@ -4,16 +4,19 @@ using EasyToDoWeb.Models;
 using EasyToDoWeb.ViewModel;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace EasyToDoWeb.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ITarefasRepository _tarefasRepository;
+        private readonly ICategoriaRepository _categoriaRepository;
 
-        public HomeController(ITarefasRepository tarefasRepository) //DI do meu repo
+        public HomeController(ITarefasRepository tarefasRepository, ICategoriaRepository categoriaRepository) //DI do meu repo
         {
             _tarefasRepository = tarefasRepository;
+            _categoriaRepository = categoriaRepository;
         }
 
         public IActionResult Index()
@@ -41,16 +44,29 @@ namespace EasyToDoWeb.Controllers
             }
 
             //Agrupo elas por categoria para trazer a exibição em blocos de cards
-            var tarefasGroup = TarefaViewModel 
+            var tarefasGroup = TarefaViewModel
                 .GroupBy(t => t.NomeCategoria)
                 .ToDictionary(g => g.Key, g => g.ToList());
             return View(tarefasGroup);
         }
 
         [HttpGet]
-        public IActionResult Create()
+        public IActionResult Create() //Replicar isso para o GET das outras views
         {
-            return View();
+
+            var categorias = _categoriaRepository.GetAll()
+                .Select(c => new SelectListItem
+                {
+                    Value = c.CategoriaID.ToString(),
+                    Text = c.NomeCategoria.ToString(),
+                }
+                );
+
+            var viewModel = new TarefaViewModel
+            {
+                Categorias = categorias
+            };
+            return View(viewModel);
         }
 
         [HttpPost]
@@ -58,6 +74,7 @@ namespace EasyToDoWeb.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 var tarefa = new Tasks
                 {
                     Name = tarefaViewModel.Name,
@@ -68,7 +85,7 @@ namespace EasyToDoWeb.Controllers
                     DataPrevista = DateTime.Parse(tarefaViewModel.DataPrevista),
                     DataInclusao = DateTime.Now
                 };
-
+                
                 _tarefasRepository.Adicionar(tarefa);
                 return RedirectToAction("Index");
             }
@@ -78,11 +95,12 @@ namespace EasyToDoWeb.Controllers
                 Console.WriteLine(error.ErrorMessage);
                 Console.ForegroundColor = ConsoleColor.White;
             }
+
             return View(tarefaViewModel);
         }
 
         [HttpGet]
-        public IActionResult Delete(int id) 
+        public IActionResult Delete(int id)
         {
             var tarefa = _tarefasRepository.Tarefas.FirstOrDefault(x => x.taskID == id);
 
@@ -104,8 +122,8 @@ namespace EasyToDoWeb.Controllers
             };
 
             return View("Delete", tarefaViewModel);
-            
-                
+
+
         }
         [HttpPost]
         public IActionResult Delete(TarefaViewModel tarefa)
@@ -170,9 +188,9 @@ namespace EasyToDoWeb.Controllers
                 Console.WriteLine(error.ErrorMessage);
                 Console.ForegroundColor = ConsoleColor.White;
             }
-            
+
             return View(tarefaViewModel);
         }
-        
+
     }
 }
