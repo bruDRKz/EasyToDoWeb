@@ -39,10 +39,9 @@
 		max-height: 62vh;
 		overflow-y: auto;
 		overflow-x: auto;
-		padding-right: 8px; 
-
-		scrollbar-width: none; 
-		-ms-overflow-style: none; 
+		padding-right: 8px;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
 	}
 
 		.card-scroll-wrapper::-webkit-scrollbar {
@@ -51,12 +50,30 @@
 			background: transparent; /* Chrome, Safari e Edge modernos */
 		}
 
-	
 </style>
 
 <div class="container-fluid py-4">
 	<h2 class="mb-3">Tarefas por Categoria</h2>
-	<a href="/Home/Create" class="btn btn-success mb-3">+ Nova Tarefa</a>
+
+	<div class="d-flex justify-content-between align-items-center mb-3">
+		<a href="/Home/Create" class="btn btn-success">+ Nova Tarefa</a>
+
+		@{
+			string filtro = ViewBag.FiltroSituacao as string ?? "Pendente";
+			bool isPend = filtro == "Pendente";
+			bool isConc = filtro == "Concluída";
+			bool isTodas = filtro == "Todas";
+		}
+
+		<form method="get">
+			<select name="filtroSituacao" class="form-select w-auto" onchange="this.form.submit()">
+				<option value="Pendente" selected="@isPend">Pendentes</option>
+				<option value="Concluída" selected="@isConc">Concluídas</option>
+				<option value="Todas" selected="@isTodas">Todas</option>
+			</select>
+		</form>
+	</div>
+	
 
 	<div class="kanban-board">
 		@foreach (var grupo in Model)

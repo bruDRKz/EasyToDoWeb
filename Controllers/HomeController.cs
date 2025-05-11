@@ -19,9 +19,18 @@ namespace EasyToDoWeb.Controllers
             _categoriaRepository = categoriaRepository;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string filtroSituacao = "Pendente")
         {
-            var TarefaViewModel = _tarefasRepository.Tarefas.Select(t => new TarefaViewModel
+            ViewBag.FiltroSituacao = filtroSituacao;
+
+            var tarefas = _tarefasRepository.Tarefas.AsQueryable();
+
+            if (!string.IsNullOrEmpty(filtroSituacao) && filtroSituacao != "Todas")
+            {
+                tarefas = tarefas.Where(t => t.Situacao == filtroSituacao);
+            }
+
+            var TarefaViewModel = tarefas.Select(t => new TarefaViewModel
             {
                 Id = t.taskID,
                 Name = t.Name,
@@ -34,8 +43,6 @@ namespace EasyToDoWeb.Controllers
                 CorCategoria = t.Categoria.Cor,
             }).ToList();
 
-            Console.WriteLine($"Número de tarefas encontradas: {TarefaViewModel.Count}");
-
             if (!TarefaViewModel.Any())
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -43,11 +50,12 @@ namespace EasyToDoWeb.Controllers
                 Console.ForegroundColor = ConsoleColor.White;
             }
 
-            //Agrupo elas por categoria para trazer a exibição em blocos de cards
             var tarefasGroup = TarefaViewModel
                 .GroupBy(t => t.NomeCategoria)
                 .ToDictionary(g => g.Key, g => g.ToList());
+
             return View(tarefasGroup);
+
         }
 
         [HttpGet]
@@ -147,6 +155,13 @@ namespace EasyToDoWeb.Controllers
                 return NotFound();
             }
 
+            var categorias = _categoriaRepository.GetAll()
+                .Select(c => new SelectListItem
+                {
+                    Value = c.CategoriaID.ToString(),
+                    Text = c.NomeCategoria.ToString(),
+                }
+                );
 
             var tarefaViewModel = new TarefaViewModel
             {
@@ -156,7 +171,8 @@ namespace EasyToDoWeb.Controllers
                 Prioridade = tarefa.Prioridade,
                 DataPrevista = tarefa.DataPrevista.ToString("yyyy-MM-dd"),
                 Situacao = tarefa.Situacao,
-                CategoriaID = tarefa.CategoriaID
+                CategoriaID = tarefa.CategoriaID,
+                Categorias = categorias,
             };
 
             return View("Edit", tarefaViewModel);

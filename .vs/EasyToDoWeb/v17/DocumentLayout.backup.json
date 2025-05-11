@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\viewmodel\\tarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:viewmodel\\tarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\viewmodel\\tarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:viewmodel\\tarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA7wBcAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T17:51:47.729Z",
               "IsPinned": true,
@@ -56,42 +48,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADgAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-07T17:54:12.033Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-09T18:58:07.219Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-09T15:10:42.889Z",
               "EditorCaption": ""
             },
             {
@@ -109,26 +75,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Home\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Edit.cshtml",
               "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Home\\Edit.cshtml",
               "RelativeToolTip": "Views\\Home\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-08T03:13:16.48Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Home\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Create.cshtml",
               "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Home\\Create.cshtml",
               "RelativeToolTip": "Views\\Home\\Create.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAwwCcAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-07T23:49:41.646Z",
               "EditorCaption": ""
