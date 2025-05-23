@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EasyToDoWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+188e25d1d5372bd61aa1538aa8dc95e255000cfe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a9d1a300f55345782a77bc80dc08067d55427c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("EasyToDoWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EasyToDoWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

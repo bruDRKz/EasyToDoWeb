@@ -18,7 +18,7 @@ namespace EasyToDoWeb.Repositories
             _context.SaveChanges();
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Categoria Adicionada");
+            Console.WriteLine("Categoria Adicionada"); 
             Console.ForegroundColor = ConsoleColor.White;
         }
 

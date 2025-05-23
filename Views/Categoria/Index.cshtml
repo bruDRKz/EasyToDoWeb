@@ -1,0 +1,98 @@
+﻿@using EasyToDoWeb.ViewModel
+@model List<CategoriaViewModel>
+
+@{
+    ViewData["Title"] = "Categorias";
+}
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="mb-0">Categorias</h1>
+        <!-- Botão abre o modal -->
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#categoriaModal">
+            Nova Categoria
+        </button>
+    </div>
+
+    <!-- Mensagens -->
+    @if (TempData["Mensagem"] != null)
+    {
+        <div class="alert alert-success">@TempData["Mensagem"]</div>
+    }
+    @if (TempData["Erro"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Erro"]</div>
+    }
+
+    <!-- Grid de cartões -->
+    <div class="row g-3">
+        @foreach (var categoria in Model)
+        {
+            <div class="col-md-4 col-lg-3">
+                <div class="card shadow border-dark border-1" style="background-color:@categoria.Cor">
+                    <div class="card-body">
+                        <h5 class="card-title">@categoria.Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            Situação: @(categoria.Situacao == 1 ? "Ativo" : "Inativo")
+                        </h6>
+
+                        <div class="d-flex justify-content-between mt-3">
+                            <a asp-controller="Categoria" asp-action="Delete" asp-route-id="@categoria.Id"
+                               class="btn btn-sm btn-danger w-48">Apagar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Modal de cadastro -->
+@await Html.PartialAsync("Modal/_ModalCadastrarCategoria", new CategoriaViewModel())
+
+
+<!-- Scripts -->
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#formCadastrarCategoria').on('submit', function (e) {
+                e.preventDefault();
+
+                var formData = $(this).serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Categoria/CadastrarCategoria",
+                    data: formData,
+                    success: function () {
+                        $('#categoriaModal').modal('hide');
+                        $('#formCadastrarCategoria')[0].reset();
+                        location.reload();
+                    },
+                    error: function () {
+                        alert("Erro ao cadastrar categoria.");
+                    }
+                });
+            });
+
+            const colorSelect = document.getElementById("colorSelect");
+            const colorPreview = document.getElementById("colorPreview");
+
+            if (colorSelect && colorPreview) {
+                function updateColorPreview() {
+                    colorPreview.style.backgroundColor = colorSelect.value;
+                }
+
+                colorSelect.addEventListener("change", updateColorPreview);
+                updateColorPreview();
+            }
+        });
+    </script>
+}
