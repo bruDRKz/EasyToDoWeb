@@ -1,113 +1,69 @@
 ﻿@model EasyToDoWeb.ViewModel.CategoriaViewModel
 
 @{
-    var cores = new Dictionary<string, string>
-            {
-                ["red"] = "rgba(220, 53, 69, 0.1)",
-                ["blue"] = "rgba(13, 110, 253, 0.1)",
-                ["green"] = "rgba(25, 135, 84, 0.1)",
-                ["orange"] = "rgba(255, 165, 0, 0.2)",
-                ["purple"] = "rgba(128, 0, 128, 0.2)",
-                ["gray"] = "rgba(108, 117, 125, 0.1)"
-            };
+	var cores = new Dictionary<string, string>
+	{
+		{ "Vermelho", "red" },
+		{ "Azul", "blue" },
+		{ "Verde", "green" },
+		{ "Laranja", "orange" },
+		{ "Roxo", "purple" },
+		{ "Cinza", "gray" }
+	};
+
 }
 
 <div class="modal fade" id="categoriaModal" tabindex="-1" aria-labelledby="categoriaModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <form id="formCadastrarCategoria">
-                <div class="modal-header">
-                    <h5 class="modal-title">Cadastrar Categoria</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content bg-dark text-light">
+			<form id="formCadastrarCategoria">
+				<div class="modal-header">
+					<h5 class="modal-title">Cadastrar Categoria</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
 
-                    <div class="mb-3">
-                        <label asp-for="Name" class="form-label">Nome</label>
-                        <input asp-for="Name" class="form-control" />
-                        <span asp-validation-for="Name" class="text-danger"></span>
-                    </div>
+					<div class="mb-3">
+						<label asp-for="Name" class="form-label">Nome</label>
+						<input asp-for="Name" class="form-control" />
+						<span asp-validation-for="Name" class="text-danger"></span>
+					</div>
 
-                    <div class="mb-3">
-                        <label asp-for="Cor" class="form-label">Cor</label>
-                        <div class="d-flex align-items-center gap-2">
-                            <select asp-for="Cor" class="form-select" id="colorSelect">
-                                @foreach (var cor in cores)
-                                {
-                                    <option value="@cor.Value">@cor.Key</option>
-                                }
-                            </select>
-                            <div id="colorPreview" style="width: 32px; height: 32px; border-radius: 50%; border: 1px solid #ccc;"></div>
-                        </div>
-                        <span asp-validation-for="Cor" class="text-danger"></span>
-                    </div>
+					<div class="mb-3">
+						<label asp-for="Cor" class="form-label">Cor</label>
+						<div class="d-flex align-items-center gap-2">
+							<select asp-for="Cor" class="form-select" id="colorSelect">
+								@foreach (var cor in cores)
+								{
+									<option value="@cor.Value">@cor.Key</option>
+								}
+							</select>
 
-                    <div class="mb-3">
-                        <label asp-for="Situacao" class="form-label">Situação</label>
-                        <select asp-for="Situacao" class="form-select">
-                            <option value="1">Ativo</option>
-                            <option value="0">Inativo</option>
-                        </select>
-                        <span asp-validation-for="Situacao" class="text-danger"></span>
-                    </div>
+						</div>
+						<span asp-validation-for="Cor" class="text-danger"></span>
+					</div>
 
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-success">Salvar</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                </div>
-            </form>
-        </div>
-    </div>
+					<div class="mb-3">
+						<label asp-for="Situacao" class="form-label">Situação</label>
+						<select asp-for="Situacao" class="form-select">
+							<option value="1">Ativo</option>
+							<option value="0">Inativo</option>
+						</select>
+						<span asp-validation-for="Situacao" class="text-danger"></span>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-success">Salvar</button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
 
 @section Scripts {
-    <script>
-        // Atualiza o preview da cor quando a seleção mudar
-        const colorSelect = document.getElementById("colorSelect");
-        const colorPreview = document.getElementById("colorPreview");
 
-        function updateColorPreview() {
-            colorPreview.style.backgroundColor = colorSelect.value;
-        }
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        colorSelect.addEventListener("change", updateColorPreview);
-
-        // Inicializa preview com a cor selecionada
-        updateColorPreview();
-    </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script>
-                $(document).ready(function () {
-                    $('#formCadastrarCategoria').on('submit', function (e) {
-                        e.preventDefault();
-
-                        var formData = $(this).serialize();
-
-                        $.ajax({
-                            type: "POST",
-                            url: "/Categoria/CadastrarCategoria",
-                            data: formData,
-                            success: function () {
-                                $('#categoriaModal').modal('hide'); // fecha o modal
-                                $('#formCadastrarCategoria')[0].reset(); // limpa os campos
-                                showAlert("Categoria cadastrada com sucesso!", "success");
-
-                                // opcional: atualizar a lista via AJAX ou recarregar a parte da tabela
-                                location.reload();
-                            },
-                            error: function () {
-                                showAlert("Erro ao cadastrar categoria.", "danger");
-                            }
-                        });
-                    });
-
-                    function showAlert(message, type) {
-                        var alertHtml = `<div class="alert alert-${type} mt-3">${message}</div>`;
-                        $('.alert').remove(); // remove alertas anteriores
-                        $('body').prepend(alertHtml); // mostra alerta no topo
-                    }
-                });
-                </script>
 }

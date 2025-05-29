@@ -1,0 +1,69 @@
+﻿@model EasyToDoWeb.ViewModel.CategoriaViewModel
+
+@{
+    var cores = new Dictionary<string, string>
+    {
+        { "Vermelho", "red" },
+        { "Azul", "blue" },
+        { "Verde", "green" },
+        { "Laranja", "orange" },
+        { "Roxo", "purple" },
+        { "Cinza", "gray" }
+    };
+}
+
+<div class="modal fade" id="modalEditarCategoria" tabindex="-1" aria-labelledby="modalEditarCategoriaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+            <form id="formEditarCategoria">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarCategoriaLabel">Editar Categoria</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+
+                    <!-- Hidden para o ID da categoria -->
+                    <input type="hidden" id="categoriaId" name="Id" />
+
+                    <div class="mb-3">
+                        <label for="editarNomeCategoria" class="form-label">Nome</label>
+                        <input id="editarNomeCategoria" name="Name" class="form-control" />
+                        <span class="text-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="editarCorCategoria" class="form-label">Cor</label>
+                        <div class="d-flex align-items-center gap-2">
+                            <select id="editarCorCategoria" name="Cor" class="form-select">
+                                @foreach (var cor in cores)
+                                {
+                                    <option value="@cor.Value">@cor.Key</option>
+                                }
+                            </select>
+                            @* <div id="editarColorPreview" style="width: 32px; height: 32px; border-radius: 50%; border: 1px solid #ccc;"></div> *@
+                        </div>
+                        <span class="text-danger" data-valmsg-for="Cor" data-valmsg-replace="true"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="editarSituacaoCategoria" class="form-label">Situação</label>
+                        <select id="editarSituacaoCategoria" name="Situacao" class="form-select">
+                            <option value="1">Ativo</option>
+                            <option value="0">Inativo</option>
+                        </select>
+                        <span class="text-danger" data-valmsg-for="Situacao" data-valmsg-replace="true"></span>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Salvar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+}

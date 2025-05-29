@@ -7,28 +7,24 @@
       "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:views\\categoria\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\views\\categoria\\modal\\_modalcadastrarcategoria.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:views\\categoria\\modal\\_modalcadastrarcategoria.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\viewmodel\\categoriaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:viewmodel\\categoriaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\views\\categoria\\modal\\_modaleditarcategoria.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:views\\categoria\\modal\\_modaleditarcategoria.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|c:\\users\\bruno rodrigues\\source\\repos\\easytodoweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1654975-44AD-4C1C-98C8-217F54077752}|EasyToDoWeb.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,6 +37,33 @@
           "SelectedChildIndex": 6,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwL0AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T23:40:53.096Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoriaController.cs",
+              "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Controllers\\CategoriaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoriaController.cs",
+              "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Controllers\\CategoriaController.cs",
+              "RelativeToolTip": "Controllers\\CategoriaController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAuwGcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T23:39:39.736Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
@@ -50,52 +73,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T01:34:30.27Z"
+              "DocumentIndex": 4,
+              "Title": "_ModalEditarCategoria.cshtml",
+              "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Categoria\\Modal\\_ModalEditarCategoria.cshtml",
+              "RelativeDocumentMoniker": "Views\\Categoria\\Modal\\_ModalEditarCategoria.cshtml",
+              "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Categoria\\Modal\\_ModalEditarCategoria.cshtml",
+              "RelativeToolTip": "Views\\Categoria\\Modal\\_ModalEditarCategoria.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEMAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-27T23:29:34.586Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "_ModalCadastrarCategoria.cshtml",
               "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Categoria\\Modal\\_ModalCadastrarCategoria.cshtml",
               "RelativeDocumentMoniker": "Views\\Categoria\\Modal\\_ModalCadastrarCategoria.cshtml",
               "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Categoria\\Modal\\_ModalCadastrarCategoria.cshtml",
               "RelativeToolTip": "Views\\Categoria\\Modal\\_ModalCadastrarCategoria.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-21T01:28:52.154Z",
+              "WhenOpened": "2025-05-27T23:29:10.61Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Models\\Categoria.cs",
-              "RelativeDocumentMoniker": "Models\\Categoria.cs",
-              "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Models\\Categoria.cs",
-              "RelativeToolTip": "Models\\Categoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T00:08:55.365Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CategoriaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\ViewModel\\CategoriaViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\CategoriaViewModel.cs",
-              "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\ViewModel\\CategoriaViewModel.cs",
-              "RelativeToolTip": "ViewModel\\CategoriaViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T23:55:25.724Z"
             },
             {
               "$type": "Document",
@@ -105,35 +104,23 @@
               "RelativeDocumentMoniker": "Views\\Categoria\\Index.cshtml",
               "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Views\\Categoria\\Index.cshtml",
               "RelativeToolTip": "Views\\Categoria\\Index.cshtml",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAD4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAAAKQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-12T23:53:48.522Z",
+              "WhenOpened": "2025-05-27T23:16:12.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CategoriaController.cs",
-              "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Controllers\\CategoriaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoriaController.cs",
-              "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Controllers\\CategoriaController.cs",
-              "RelativeToolTip": "Controllers\\CategoriaController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAmwCwAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T23:39:39.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "CategoriaRepository.cs",
               "DocumentMoniker": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Repositories\\CategoriaRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\CategoriaRepository.cs",
               "ToolTip": "C:\\Users\\Bruno Rodrigues\\source\\repos\\EasyToDoWeb\\Repositories\\CategoriaRepository.cs",
               "RelativeToolTip": "Repositories\\CategoriaRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T23:27:57.405Z"
+              "WhenOpened": "2025-05-12T23:27:57.405Z",
+              "EditorCaption": ""
             }
           ]
         }
