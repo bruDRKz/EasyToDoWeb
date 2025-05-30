@@ -60,8 +60,7 @@
               "ViewState": "AgIAAFgAAAAAAAAAAAAuwGcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T23:39:39.736Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -93,8 +92,7 @@
               "RelativeToolTip": "Views\\Categoria\\Modal\\_ModalCadastrarCategoria.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-27T23:29:10.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T23:29:10.61Z"
             },
             {
               "$type": "Document",
@@ -119,8 +117,7 @@
               "RelativeToolTip": "Repositories\\CategoriaRepository.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAwBgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T23:27:57.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T23:27:57.405Z"
             }
           ]
         }
